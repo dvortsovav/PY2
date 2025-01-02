@@ -85,17 +85,3 @@ class ElectronicNotebook(Notebook):
         """Официальное строковое представление электронного блокнота."""
         return (f"{self.__class__.__name__}(brand={self.brand!r}, model={self.model!r}, "
                 f"battery_life={self.battery_life:.2f})")
-
-
-# Пример использования
-if __name__ == "__main__":
-    notebook = Notebook("Moleskine", "Classic", 240)
-    electronic_notebook = ElectronicNotebook("Sony", "Digital Paper", 3.5)
-
-    print(notebook)
-    print(electronic_notebook)
-    print(repr(notebook))
-    print(repr(electronic_notebook))
-
-    print(notebook.write("Привет, мир!"))
-    print(electronic_notebook.write("Привет, мир!"))
